@@ -133,3 +133,9 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('main.homepage'))
+
+@main.route('/shopping_list')
+@login_required
+def shopping_list():
+    shopping_list()
+    return redirect(url_for('main.item_detail'))
