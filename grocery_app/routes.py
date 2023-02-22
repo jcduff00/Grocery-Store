@@ -1,9 +1,10 @@
 from flask import Blueprint, request, render_template, redirect, url_for, flash
 from datetime import date, datetime
-from grocery_app.models import GroceryStore, GroceryItem
-from grocery_app.forms import GroceryStoreForm, GroceryItemForm
+from grocery_app.models import GroceryStore, GroceryItem, User
+from grocery_app.forms import GroceryStoreForm, GroceryItemForm, LoginForm, SignUpForm
 
 from grocery_app.extensions import app, db
+import bcrypt
 
 main = Blueprint("main", __name__)
 auth = Blueprint("auth", __name__)
