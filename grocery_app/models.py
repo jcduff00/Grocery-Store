@@ -5,7 +5,7 @@ from grocery_app.utils import FormEnum
 
 class User(db.Model): 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String,nullable=False)
+    name = db.Column(db.String, nullable=False)
     password = db.Column(db.String, nullable=False)
 
 class ItemCategory(FormEnum):
